@@ -1,0 +1,20 @@
+name: Test
+on:
+  push:
+    braches:
+      - main
+#on: [push]
+jobs:
+  run-test:
+    name: Test-job1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check the code
+        uses: actions/checkout@v3
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Build
+        run: npm run build
