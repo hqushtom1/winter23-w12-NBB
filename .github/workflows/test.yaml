@@ -18,3 +18,16 @@ jobs:
 
       - name: Build
         run: npm run build
+  run-test2:
+    name: Test-job2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check the code
+        uses: actions/checkout@v3
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Build
+        run: npm run build
