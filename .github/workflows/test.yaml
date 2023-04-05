@@ -2,7 +2,7 @@ name: Test
 on:
   push:
     braches:
-      - main
+      - main 
 #on: [push]
 jobs:
   run-test:
